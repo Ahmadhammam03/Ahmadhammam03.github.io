@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/Users/danahammam/Desktop/MIT Web-Project/CSS_Folder/Contact_style.css">
+    <title>Contact me</title>
+</head>
+
+<body>
+    <section>
+        <header class="container">
+            <div class="page-header">
+                <div class="logo">
+                    <a href="#">AH.</a>
+                </div>
+                <input type="checkbox" id="click">
+
+                <label for="click" class="mainicon">
+                    <div class="menu">
+                        <i class='bx bx-menu'></i>
+                    </div>
+                </label>
+                <ul>
+                    <li><a href="/Users/danahammam/Desktop/MIT Web-Project/index.html"
+                            style="--navAni:1">Home</a></li>
+                    <li><a href="About.html" style="--navAni:2">Projects</a></li>
+                    <!-- <li><a href="#" style="--navAni:3">Skills</a></li> -->
+                    <li><a href="CV.html" style="--navAni:4">C.V</a></li>
+                    <li><a href="#" style="--navAni:5" class="active">Contact</a></li>
+                </ul>
+                <label class="mode">
+                    <input type="checkbox" id="darkModeToggle">
+                    <i class='bx bxs-moon'></i>
+                </label>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="row">
+                <h1>contact me</h1>
+            </div>
+            <div class="row">
+                <h4 style="text-align:center">I'd love to hear from you!</h4>
+            </div>
+            <form action="mailto: ahmadhammam501@gmail.com" method="post" enctype="multipart/form-data">
+                <div class="row input-container">
+                    <div class="col-xs-12">
+                        <div class="styled-input wide">
+                            <input type="text" required />
+                            <label>Name</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="styled-input">
+                            <input type="email" id="email" name="email" required>
+                            <label>Email</label>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="styled-input" style="float:right;">
+                            <input type="text" id="phone" required />
+                            <label>Phone Number</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="styled-input wide">
+                            <input type="text" required />
+                            <label>Message</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <button type="submit" class="btn-lrg submit-btn">Send Message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+
+
+        <!-- <footer>
+            <p class="website__rights"> ©️ Ahmad Hammam 2024. All rights reserved</p>
+        </footer> -->
+    </section>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+
+</html>
